@@ -14,3 +14,5 @@ Dla administratorów budynków, którzy pragną optymalizować koszty zarządzan
    o heating = poziom zużycia energii ogrzewania (float)
    o light – łączna moc oświetlenia
 "
+
+![Build status](<https://travis-ci.com/Klau-Sam/Building-info.svg?branch=main>)
