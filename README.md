@@ -15,4 +15,4 @@ Dla administratorów budynków, którzy pragną optymalizować koszty zarządzan
    o light – łączna moc oświetlenia
 "
 
-![Build status](<https://travis-ci.com/Klau-Sam/Building-info.svg?branch=main>)
+![Build status](<https://travis-ci.com/RadeckiR/Building-info.svg?branch=main>)
