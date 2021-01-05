@@ -11,6 +11,9 @@ import pl.put.poznan.transformer.composite.Room;
 
 import java.util.Arrays;
 
+/**
+ * Class that manages the REST comunication
+ */
 
 @RestController
 public class TextTransformerController {
@@ -18,6 +21,10 @@ public class TextTransformerController {
     private static final Logger logger = LoggerFactory.getLogger(TextTransformerController.class);
     private static Building building = new Building(3, "Building");
 
+    /**
+     * Create an example of building structure
+     * @return Object of Building
+     */
     @GetMapping("/create")
     Building create() {
         Room room1 = new Room(313, "Dining room", 20, 112, 30, 10);
@@ -43,6 +50,12 @@ public class TextTransformerController {
         return building;
     }
 
+    /**
+     *Calculates area of the given Location
+     * @param id id of Location
+     * @param building Building, which contains location from the first parameter
+     * @return calculated area
+     */
     @GetMapping("area/{id}")
     Obj returnArea(@PathVariable int id, @RequestBody Building building) {
         AreaVisitor areaVisitor = new AreaVisitor(id);
@@ -50,7 +63,12 @@ public class TextTransformerController {
         logger.info("Request for area of " + id + " id");
         return new Obj(String.valueOf(areaVisitor.getArea()));
     }
-
+    /**
+     *Calculates cubature of the given Location
+     * @param id id of Location
+     * @param building Building, which contains location from the first parameter
+     * @return calculated cubature
+     */
     @GetMapping("/cube/{id}")
     Obj returnCubature(@PathVariable int id, @RequestBody Building building) {
         CubatureVisitor CubatureVisitor = new CubatureVisitor(id);

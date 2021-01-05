@@ -1,3 +1,11 @@
-/Users/mochodek/Documents/Dydaktyka/Wyklady/IO/Laboratory classes/projekt/ioprojectarchitecture/src/main/java/pl/put/poznan/transformer/app/TextTransformerApplication.java
-/Users/mochodek/Documents/Dydaktyka/Wyklady/IO/Laboratory classes/projekt/ioprojectarchitecture/src/main/java/pl/put/poznan/transformer/logic/TextTransformer.java
-/Users/mochodek/Documents/Dydaktyka/Wyklady/IO/Laboratory classes/projekt/ioprojectarchitecture/src/main/java/pl/put/poznan/transformer/rest/TextTransformerController.java
+C:\Users\Agata\Documents\IO\build2\Building-Info\src\main\java\pl\put\poznan\transformer\logic\TextTransformer.java
+C:\Users\Agata\Documents\IO\build2\Building-Info\src\main\java\pl\put\poznan\transformer\rest\Obj.java
+C:\Users\Agata\Documents\IO\build2\Building-Info\src\main\java\pl\put\poznan\transformer\composite\Building.java
+C:\Users\Agata\Documents\IO\build2\Building-Info\src\main\java\pl\put\poznan\transformer\app\TextTransformerApplication.java
+C:\Users\Agata\Documents\IO\build2\Building-Info\src\main\java\pl\put\poznan\transformer\rest\TextTransformerController.java
+C:\Users\Agata\Documents\IO\build2\Building-Info\src\main\java\pl\put\poznan\transformer\composite\Room.java
+C:\Users\Agata\Documents\IO\build2\Building-Info\src\main\java\pl\put\poznan\transformer\logic\Visitor.java
+C:\Users\Agata\Documents\IO\build2\Building-Info\src\main\java\pl\put\poznan\transformer\composite\Location.java
+C:\Users\Agata\Documents\IO\build2\Building-Info\src\main\java\pl\put\poznan\transformer\logic\AreaVisitor.java
+C:\Users\Agata\Documents\IO\build2\Building-Info\src\main\java\pl\put\poznan\transformer\logic\CubatureVisitor.java
+C:\Users\Agata\Documents\IO\build2\Building-Info\src\main\java\pl\put\poznan\transformer\composite\Level.java
