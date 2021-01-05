@@ -13,7 +13,7 @@ public abstract class Location {
      */
     private final int id;
     /**
-     * name of location
+     * location's name
      */
     private final String name;
 
@@ -31,13 +31,13 @@ public abstract class Location {
     }
 
     /**
-     * Calculates area of location
+     * Calculates location's area
      * @return area
      */
     public abstract float calculateArea();
 
     /**
-     * Calculates cubature of location
+     * Calculates location's area
      * @return cubature
      */
     public abstract float calculateCubature();

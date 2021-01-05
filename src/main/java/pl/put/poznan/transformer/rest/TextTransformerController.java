@@ -23,7 +23,7 @@ public class TextTransformerController {
 
     /**
      * Create an example of building structure
-     * @return Object of Building
+     * @return Building object
      */
     @GetMapping("/create")
     Building create() {
