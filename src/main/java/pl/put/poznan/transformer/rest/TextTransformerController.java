@@ -16,9 +16,8 @@ import java.util.Arrays;
  */
 
 @RestController
-public class BuildingInfoController {
-
-    private static final Logger logger = LoggerFactory.getLogger(BuildingInfoController.class);
+public class TextTransformerController {
+    private static final Logger logger = LoggerFactory.getLogger(TextTransformerController.class);
     private static Building building = new Building(3, "Building");
 
     /**
@@ -76,7 +75,4 @@ public class BuildingInfoController {
         logger.info("Request for cubature of " + id + " id");
         return new Obj(String.valueOf(CubatureVisitor.getCubature()));
     }
-
 }
-
-
