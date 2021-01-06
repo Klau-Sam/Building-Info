@@ -16,9 +16,9 @@ import java.util.Arrays;
  */
 
 @RestController
-public class TextTransformerController {
+public class BuildingInfoController {
 
-    private static final Logger logger = LoggerFactory.getLogger(TextTransformerController.class);
+    private static final Logger logger = LoggerFactory.getLogger(BuildingInfoController.class);
     private static Building building = new Building(3, "Building");
 
     /**
@@ -69,7 +69,7 @@ public class TextTransformerController {
      * @param building Building, which contains location from the first parameter
      * @return calculated cubature
      */
-    @GetMapping("/cube/{id}")
+    @GetMapping("/cubature/{id}")
     Obj returnCubature(@PathVariable int id, @RequestBody Building building) {
         CubatureVisitor CubatureVisitor = new CubatureVisitor(id);
         building.accept(CubatureVisitor);
