@@ -16,8 +16,8 @@ import java.util.Arrays;
  */
 
 @RestController
-public class TextTransformerController {
-    private static final Logger logger = LoggerFactory.getLogger(TextTransformerController.class);
+public class BuildingInfoContorller {
+    private static final Logger logger = LoggerFactory.getLogger(BuildingInfoContorller.class);
     private static Building building = new Building(3, "Building");
 
     /**
