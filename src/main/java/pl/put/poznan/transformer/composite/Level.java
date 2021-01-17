@@ -54,4 +54,30 @@ public class Level extends Location {
         return listOfRooms;
     }
 
+    @Override
+    public float calculateHeatingEnergy() {
+        float heatingResult = 0;
+        for (Room i : listOfRooms) {
+            heatingResult += i.calculateHeatingEnergy();
+        }
+        return listOfRooms.size() == 0 ? 0.0f : heatingResult/ listOfRooms.size();
+    }
+    @Override
+    public float calculateTaxes() {
+        float sumOfTaxes = 0;
+        for (Room i : listOfRooms) {
+            sumOfTaxes += i.calculateTaxes();
+        }
+        return sumOfTaxes;
+    }
+
+    @Override
+    public float calculateLightPower() {
+        float lightResult = 0;
+        for (Room i : listOfRooms) {
+            lightResult += i.calculateLightPower();
+        }
+        return listOfRooms.size() == 0 ? 0.0f : lightResult/listOfRooms.size();
+    }
+
 }

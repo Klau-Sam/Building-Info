@@ -10,6 +10,7 @@ import pl.put.poznan.transformer.composite.Location;
 import pl.put.poznan.transformer.composite.Room;
 
 import java.util.Arrays;
+import java.util.List;
 
 /**
  * Class that manages the REST comunication
@@ -18,7 +19,7 @@ import java.util.Arrays;
 @RestController
 public class BuildingInfoContorller {
     private static final Logger logger = LoggerFactory.getLogger(BuildingInfoContorller.class);
-    private static Building building = new Building(3, "Building");
+    private static Building building = new Building(3, "Building", 0.52f);
 
     /**
      * Create an example of building structure
@@ -26,15 +27,15 @@ public class BuildingInfoContorller {
      */
     @GetMapping("/create")
     Building create() {
-        Room room1 = new Room(313, "Dining room", 20, 112, 30, 10);
-        Room room2 = new Room(323, "Kitchen", 15, 80, 25, 19);
-        Room room3 = new Room(333, "Living room", 75, 210, 50, 60);
-        Room room4 = new Room(343, "Bathroom", 13, 72, 26, 30);
-        Room room5 = new Room(353, "Bedroom",  15, 90, 17, 13);
-        Room room6 = new Room(363, "Office", 25, 150, 13, 21);
-        Room room7 = new Room(373, "Shower room", 10, 66, 30, 8);
-        Room room8 = new Room(383, "Library", 15, 77, 10, 33);
-        Room room9 = new Room(383, "Attic", 32, 44, 8, 10);
+        Room room1 = new Room(313, "Dining room", 112, 66, 30, 10,0.85f);
+        Room room2 = new Room(323, "Kitchen", 80, 50, 25, 19,0.85f);
+        Room room3 = new Room(333, "Living room", 75, 48, 50, 60,0.85f);
+        Room room4 = new Room(343, "Bathroom", 100, 72, 26, 30,0.85f);
+        Room room5 = new Room(353, "Bedroom",  50, 30, 17, 13,0.85f);
+        Room room6 = new Room(363, "Office", 25, 21, 13, 21,0.85f);
+        Room room7 = new Room(373, "Shower room", 10, 7, 30, 8,0.85f);
+        Room room8 = new Room(383, "Library", 15, 11, 10, 33,0.85f);
+        Room room9 = new Room(383, "Attic", 19, 12, 8, 10,0.85f);
 
         Level level0 = new Level(500, "Ground floor", room1, room2, room3, room4);
         Level level1 = new Level(501, "First floor", room5, room6, room7);
@@ -70,9 +71,51 @@ public class BuildingInfoContorller {
      */
     @GetMapping("/cubature/{id}")
     Obj returnCubature(@PathVariable int id, @RequestBody Building building) {
-        CubatureVisitor CubatureVisitor = new CubatureVisitor(id);
-        building.accept(CubatureVisitor);
+        CubatureVisitor cubatureVisitor = new CubatureVisitor(id);
+        building.accept(cubatureVisitor);
         logger.info("Request for cubature of " + id + " id");
-        return new Obj(String.valueOf(CubatureVisitor.getCubature()));
+        return new Obj(String.valueOf(cubatureVisitor.getCubature()));
+    }
+
+    @GetMapping("/lightPower/{id}")
+    Obj returnLightPower(@PathVariable int id, @RequestBody Building building) {
+        LightPowerVisitor lightPowerVisitor = new LightPowerVisitor(id);
+        building.accept(lightPowerVisitor);
+        logger.info("Request for light power of " + id + " id");
+        return new Obj(String.valueOf(lightPowerVisitor.getLightPower()));
+    }
+    @GetMapping("/tax/{id}")
+    Obj returnTax(@PathVariable int id, @RequestBody Building building) {
+        TaxesVisitor  taxesVisitor= new TaxesVisitor(id);
+        building.accept(taxesVisitor);
+        logger.info("Request for tax of " + id + " id");
+        return new Obj(String.valueOf(taxesVisitor.getSumOfTaxes()));
+    }
+    /**
+     *
+     * @param overheatingLimit a certain level of energy consumption
+     * @param building Building on which calculations are performed
+     * @return locations where energy consumption is higher that allowed level.
+     */
+    @GetMapping("/heatingOptimalize/{overheatingLimit}")
+    List<Location> heatingOptimalizeLocations(@PathVariable float overheatingLimit, @RequestBody Building building) {
+        HeatingOptimalizeVisitor visitor = new HeatingOptimalizeVisitor(overheatingLimit);
+        building.accept(visitor);
+        logger.info("Request for locations with avg. heating above " + overheatingLimit);
+        return visitor.getOverheatedLocations();
+    }
+
+    /**
+     * Calculates power used on heating per volume unit of specific Location
+     * @param id id of Location to be examined
+     * @param building Building on which calculations are performed
+     * @return power used on heating per volume of Location provided as argument
+     */
+    @GetMapping("/heatingEnergy/{id}")
+    Obj returnHeatingEnergy(@PathVariable int id, @RequestBody Building building) {
+        HeatingEnergyVisitor HeatingEnergyVisitor = new HeatingEnergyVisitor(id);
+        building.accept(HeatingEnergyVisitor);
+        logger.info("Request for heating of " + id + " id");
+        return new Obj(String.valueOf(HeatingEnergyVisitor.getHeatingEnergy()));
     }
 }

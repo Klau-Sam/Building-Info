@@ -47,4 +47,22 @@ public abstract class Location {
      * @param visitor visitor that wants to calculate sth
      */
     public abstract void accept(Visitor visitor);
+
+    /**
+     * Calculates location's heating cost per m^3
+     * @return heatingCost
+     */
+    public abstract float calculateHeatingEnergy();
+    /**
+     * Calculates location's taxes
+     * @return sumOfTaxes
+     */
+
+    public abstract float calculateTaxes();
+    /**
+     * Calculates location's lighting power per m^3
+     * @return lightResult
+     */
+
+    public abstract float calculateLightPower();
 }
