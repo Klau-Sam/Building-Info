@@ -12,7 +12,7 @@ class RoomTest {
 
     @BeforeAll
     static void beforeAll() {
-        room = new Room(777, "Test Room", 10.0f, 30.0f, 40.0f, 50.0f,0.85f);
+        room = new Room(777, "Test Room", 50.0f, 30.0f, 40.0f, 50.0f,0.85f);
     }
 
     @Test
@@ -22,12 +22,12 @@ class RoomTest {
 
     @Test
     void calculateCubatureTest() {
-        assertEquals(room.calculateCubature(), 10.0f);
+        assertEquals(room.calculateCubature(), 50.0f);
     }
 
     @Test
     void calculateHeatingEnergyTest() {
-        assertEquals(room.calculateHeatingEnergy(), 40.0f/10.0f);
+        assertEquals(room.calculateHeatingEnergy(), 40.0f/50.0f);
     }
 
     @Test
@@ -38,8 +38,8 @@ class RoomTest {
     }
 
     @Test
-    void getPropertyTaxTest() {
-        assertEquals(room.getPropertyTax(), 0.85f);
+    void calculateTaxesTest() {
+        assertEquals(room.calculateTaxes(), 12.75f);
     }
 
 }
