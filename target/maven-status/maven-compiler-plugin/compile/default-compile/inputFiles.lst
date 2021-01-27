@@ -1,10 +1,14 @@
+C:\Users\Agata\Documents\IO\build4\Building-Info\src\main\java\pl\put\poznan\transformer\logic\LightPowerVisitor.java
+C:\Users\Agata\Documents\IO\build4\Building-Info\src\main\java\pl\put\poznan\transformer\logic\TaxesVisitor.java
 C:\Users\Agata\Documents\IO\build4\Building-Info\src\main\java\pl\put\poznan\transformer\composite\Location.java
+C:\Users\Agata\Documents\IO\build4\Building-Info\src\main\java\pl\put\poznan\transformer\logic\HeatingOptimalizeVisitor.java
+C:\Users\Agata\Documents\IO\build4\Building-Info\src\main\java\pl\put\poznan\transformer\rest\Obj.java
+C:\Users\Agata\Documents\IO\build4\Building-Info\src\main\java\pl\put\poznan\transformer\logic\CubatureVisitor.java
+C:\Users\Agata\Documents\IO\build4\Building-Info\src\main\java\pl\put\poznan\transformer\logic\HeatingEnergyVisitor.java
+C:\Users\Agata\Documents\IO\build4\Building-Info\src\main\java\pl\put\poznan\transformer\composite\Building.java
 C:\Users\Agata\Documents\IO\build4\Building-Info\src\main\java\pl\put\poznan\transformer\logic\Visitor.java
 C:\Users\Agata\Documents\IO\build4\Building-Info\src\main\java\pl\put\poznan\transformer\composite\Room.java
-C:\Users\Agata\Documents\IO\build4\Building-Info\src\main\java\pl\put\poznan\transformer\rest\Obj.java
 C:\Users\Agata\Documents\IO\build4\Building-Info\src\main\java\pl\put\poznan\transformer\app\BuildingApplication.java
-C:\Users\Agata\Documents\IO\build4\Building-Info\src\main\java\pl\put\poznan\transformer\logic\CubatureVisitor.java
 C:\Users\Agata\Documents\IO\build4\Building-Info\src\main\java\pl\put\poznan\transformer\logic\AreaVisitor.java
-C:\Users\Agata\Documents\IO\build4\Building-Info\src\main\java\pl\put\poznan\transformer\composite\Building.java
 C:\Users\Agata\Documents\IO\build4\Building-Info\src\main\java\pl\put\poznan\transformer\composite\Level.java
 C:\Users\Agata\Documents\IO\build4\Building-Info\src\main\java\pl\put\poznan\transformer\rest\BuildingInfoContorller.java

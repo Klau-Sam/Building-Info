@@ -1,7 +1,7 @@
-pl\put\poznan\transformer\logic\CubatureVisitor.class
 pl\put\poznan\transformer\composite\Level.class
-pl\put\poznan\transformer\composite\Location.class
 pl\put\poznan\transformer\composite\Room.class
+pl\put\poznan\transformer\logic\Visitor.class
+pl\put\poznan\transformer\logic\CubatureVisitor.class
+pl\put\poznan\transformer\composite\Location.class
 pl\put\poznan\transformer\logic\AreaVisitor.class
 pl\put\poznan\transformer\composite\Building.class
-pl\put\poznan\transformer\logic\Visitor.class
